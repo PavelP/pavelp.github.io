@@ -2,29 +2,20 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 	<head>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+		<script type='text/javascript'>    
+		  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/12rAr_zgArgaEMGweg3QO1vL_HLhuYNGBSUal30gkalI/edit?usp=sharing';
 
-	</head>
-	<body>
-		<h1>Hello World!</h1>
-		<div class=”post”>
-		</div>
+		  function init() {
+		    Tabletop.init( { key: publicSpreadsheetUrl,
+		                     callback: showInfo,
+		                     simpleSheet: true } )
+		  }
 
-	</body>
-
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
-	<script type='text/javascript'>    
-	  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/12rAr_zgArgaEMGweg3QO1vL_HLhuYNGBSUal30gkalI/edit?usp=sharing';
-
-	  function init() {
-	    Tabletop.init( { key: publicSpreadsheetUrl,
-	                     callback: showInfo,
-	                     simpleSheet: true } )
-	  }
-
-	  function showInfo(data, tabletop) {
-	    alert('Successfully processed!')
-	    console.log(data);
-	    for (var i = 0; i < data.length; i++) {
+		  function showInfo(data, tabletop) {
+		    console.log(data);
+		    for (var i = 0; i < data.length; i++) {
+		    alert('Successfully processed!')
 			$(‘.post’).append(
 			‘<div class=”article” style=”background-image: url( ‘ +
 			data[i].img + ‘.jpg)”>’ +
@@ -36,8 +27,14 @@
 			‘</div>’ +
 			‘</div>’);
 			}
-	  }
+		  }
 
-	  window.addEventListener('DOMContentLoaded', init)
-	</script>
+		  window.addEventListener('DOMContentLoaded', init)
+		</script>
+	</head>
+	<body>
+		<h1>Hello World!</h1>
+		<div class=”post”>
+		</div>
+	</body>
 </html>
