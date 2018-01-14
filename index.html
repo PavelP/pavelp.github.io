@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Frontpage - Start Bootstrap Template</title>
+    <title>Rehearsal Rooms</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,37 +60,13 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container">
+	<div class="container">
+		<div class="row post">
+<!-- 			<div class="post">			
+			</div>
+ -->		</div>
 
-      <div class="row">
-        <div class="col-sm-8">
-          <h2 class="mt-4">What We Do</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
-          <p>
-            <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
-          </p>
-        </div>
-        <div class="col-sm-4">
-          <h2 class="mt-4">Contact Us</h2>
-          <address>
-            <strong>Start Bootstrap</strong>
-            <br>3481 Melrose Place
-            <br>Beverly Hills, CA 90210
-            <br>
-          </address>
-          <address>
-            <abbr title="Phone">P:</abbr>
-            (123) 456-7890
-            <br>
-            <abbr title="Email">E:</abbr>
-            <a href="mailto:#">name@example.com</a>
-          </address>
-        </div>
-      </div>
-      <!-- /.row -->
-
-      <div class="row">
+       <div class="row">
         <div class="col-sm-4 my-4">
           <div class="card">
             <img class="card-img-top" src="http://placehold.it/300x200" alt="">
@@ -126,9 +102,9 @@
               <a href="#" class="btn btn-primary">Find Out More!</a>
             </div>
           </div>
-        </div>
+        </div> 
 
-      </div>
+      </div> 
       <!-- /.row -->
 
     </div>
@@ -146,6 +122,54 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Table Top Javascript -->
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+    <script type='text/javascript'>    
+     	 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/12rAr_zgArgaEMGweg3QO1vL_HLhuYNGBSUal30gkalI/edit?usp=sharing';
+
+    	function init() {
+    	Tabletop.init( { key: publicSpreadsheetUrl,
+    	         		   callback: showInfo,
+    	          		   simpleSheet: true } )
+    	}
+
+    	function showInfo(data, tabletop) {
+    		// for (var i = 0; i < data.length; i++) {
+    		// $('.post').append(
+    		// '<div class=”article” style=”background-image: url( ' +
+    		// data[i].img + '.jpg)”>' +
+    		// '<div class=”text”>' +
+    		// '<h1>' + data[i].name + '</h1>'+
+    		// data[i].description +
+    		//  '</div> ' + '<div class=”meta-info”>' + '<img src =”' + data[i].img + '.jpg”>'+
+    		// // '<div class=”date”>' + data[i].date + '</div>' +
+    		// // '</div>' +
+    		// '</div>');
+    		// }
+
+    		for (var i = 0; i < data.length; i++) {
+    		$('.post').append(
+    		 '<div class="col-sm-4 my-4">' +
+	         '<div class="card">' +
+	            '<img class="card-img-top" src="img/' + data[i].img + '.jpg" alt="">' +
+	            '<div class="card-body">' +
+	              '<h4 class="card-title">' + data[i].name + '</h4>' +
+	              '<p class="card-text">' + data[i].description + '</p>' +
+	              '<p class="card-text"><a href="tel:'+ data[i].phone +'">' + data[i].phone + '</a></p>' +
+	              '<p class="card-text">' + data[i].address + '</p>' +
+	              '<p class="card-text">' + data[i].rating + '</p>' +
+	            '</div>' +
+	            '<div class="card-footer">' +
+	              '<a href="' + data[i].website + '" class="btn btn-primary" target="_blank">Find Out More!</a>' +
+	            '</div>' +
+	          '</div>' +
+	        '</div>');
+	    	}
+    	}
+
+		window.addEventListener('DOMContentLoaded', init)
+	</script>
   </body>
 
 </html>
