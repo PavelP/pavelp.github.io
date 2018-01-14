@@ -13,9 +13,9 @@
 			}
 
 			function showInfo(data, tabletop) {
-			console.log(data);
 
 				for (var i = 0; i < data.length; i++) {
+								console.log(data);
 				alert('Successfully processed!')
 				$('.post').append(
 				'<div class=”article” style=”background-image: url( ' +
@@ -29,12 +29,13 @@
 				'</div>');
 				}
 			}
+			
 			window.addEventListener('DOMContentLoaded', init)
 		</script>
 	</head>
 	<body>
 		<h1>Hello World!</h1>
-		<div class='post'>
+		<div class="post">
 		</div>
 	</body>
 </html>
