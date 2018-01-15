@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Rehearsal Rooms</title>
+    <title>Rehearsal Rooms in Poland</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">Polske Sale Prób</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -53,59 +53,40 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h1 class="display-3 text-center text-white mt-4">Business Name or Tagline</h1>
+            <h1 class="display-4 text-center text-white mt-4">Pełna lista Polskich Salek Prób muzycznych</h1>
           </div>
         </div>
       </div>
     </header>
+	
+	<!-- List Map Switcher -->
+<!-- 	<div class="container">
+		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+		  <li class="nav-item">
+		    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">List</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Map</a>
+		  </li>
+		</ul>
+	</div>
+
+	<div class="tab-content" id="pills-tabContent">
+		<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+		<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+		<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+	</div> -->
 
     <!-- Page Content -->
 	<div class="container">
+	 <div>
+    <h1>Kraków </h1>
+   </div>
+	<!-- Main Cards Container. Row -->	
 		<div class="row post">
-<!-- 			<div class="post">			
-			</div>
- -->		</div>
+		</div>
 
-       <div class="row">
-        <div class="col-sm-4 my-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 my-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 my-4">
-          <div class="card">
-            <img class="card-img-top" src="http://placehold.it/300x200" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Find Out More!</a>
-            </div>
-          </div>
-        </div> 
-
-      </div> 
-      <!-- /.row -->
+    <!-- /.row -->
 
     </div>
     <!-- /.container -->
@@ -113,7 +94,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white">Made with ❤️ by PP &copy; 2018</p>
       </div>
       <!-- /.container -->
     </footer>
@@ -135,18 +116,6 @@
     	}
 
     	function showInfo(data, tabletop) {
-    		// for (var i = 0; i < data.length; i++) {
-    		// $('.post').append(
-    		// '<div class=”article” style=”background-image: url( ' +
-    		// data[i].img + '.jpg)”>' +
-    		// '<div class=”text”>' +
-    		// '<h1>' + data[i].name + '</h1>'+
-    		// data[i].description +
-    		//  '</div> ' + '<div class=”meta-info”>' + '<img src =”' + data[i].img + '.jpg”>'+
-    		// // '<div class=”date”>' + data[i].date + '</div>' +
-    		// // '</div>' +
-    		// '</div>');
-    		// }
 
     		for (var i = 0; i < data.length; i++) {
     		$('.post').append(
@@ -157,7 +126,7 @@
 	              '<h4 class="card-title">' + data[i].name + '</h4>' +
 	              '<p class="card-text">' + data[i].description + '</p>' +
 	              '<p class="card-text"><a href="tel:'+ data[i].phone +'">' + data[i].phone + '</a></p>' +
-	              '<p class="card-text">' + data[i].address + '</p>' +
+	              '<p class="card-text"><a href="http://maps.google.com/maps?q=' + encodeURIComponent(data[i].address) + '" target="_blank">' + data[i].address + '</a></p>' +
 	              '<p class="card-text">' + data[i].rating + '</p>' +
 	            '</div>' +
 	            '<div class="card-footer">' +
@@ -169,6 +138,7 @@
     	}
 
 		window.addEventListener('DOMContentLoaded', init)
+
 	</script>
   </body>
 
